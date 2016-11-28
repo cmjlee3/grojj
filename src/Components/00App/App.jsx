@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+import SaveMap from './Maps.jsx';
+
 import LoginSignup from '../01LoginSignup/LoginSignup.jsx';
 import Logout from '../01Logout/Logout.jsx';
 import CreateStore from '../02CreateStore/CreateStore.jsx';
@@ -13,11 +15,16 @@ import './MattApp.css';
 
 
 
-export default class App extends Component {
+class App extends Component {
+
   constructor() {
     super();
 
     this.state = {
+      // markers: {
+      //   lat: 40.7575285,
+      //   lng: -73.9884469
+      // },
       searchZip: '',
       loggedIn: false,
       currentUser: '',
@@ -72,6 +79,7 @@ export default class App extends Component {
     };
   }
 
+
   showLoginSignup() {
     let loginSignup = document.querySelector('#loginSignup');
     loginSignup.style.display = 'block';
@@ -90,6 +98,7 @@ export default class App extends Component {
   showLogoutButton() {
     let logoutButton = document.querySelector('#logoutButton');
     logoutButton.style.display = 'block';
+
   }
 
   hideEditForm() {
@@ -457,35 +466,31 @@ export default class App extends Component {
     })
   };
 
-   // componentWillMount() {
-   //   const body = document.getElementsByTagName('body')[0];
-   //   const script = document.createElement("script");
-
-   //    script.type = 'text/javascript';
-   //    script.className = 'container';
-
-   //    script.src = "http://maps.google.com/maps/api/js?key=AIzaSyDu1zOGCMJEMn2Ja45WRuyWFN_Rv7ZSh3c";
-   //    script.async= true;
-   //    script.defer= true;
-
-   //    body.appendChild(script);
-   //    // script.onload = () => {
-   //    //     console.log(document.querySelector('.container'));
-   //    //     ReactDOM.render( <script />,
-   //    //       document.querySelector('.container')
-   //    //     );
-   //    // };
-
-   //  // console.log(script)
-   //  }
   loginError() {
     let loginError = document.querySelector('#loginError')
     loginError.style.display = 'block';
   }
 
   render(){
+
+    const location = {
+      lat: 40.7575285,
+      lng: -73.9884469
+    }
+//Below is where you create your pins/markers
+    const markers = [
+      {
+        location:{
+          lat: 40.7575285,
+          lng: -73.9884469
+        }
+      }
+    ]
+
     return (
       <div>
+
+
         <header>
           <h1>Grojj.</h1>
           <button id="loginButton" onClick={this.showLoginSignup}>Login or Sign Up</button>
@@ -514,8 +519,20 @@ export default class App extends Component {
                 postSignup={this.postSignup.bind(this)}
               />
           </nav>
+
+
         </header>
         <main>
+
+          <div style={{width:400, height:400, background: 'red'}}>
+
+            <SaveMap
+              center={location}
+              markers={markers}
+            />
+
+          </div>
+
           <CreateStore
             postNewStorefront={this.postNewStorefront.bind(this)}
             trackCreateStore={this.trackCreateStore.bind(this)}
@@ -539,6 +556,7 @@ export default class App extends Component {
             trackCreateItem={this.trackCreateItem.bind(this)}
           />
         </main>
+
         <footer>
           <div></div>
         </footer>
@@ -546,3 +564,7 @@ export default class App extends Component {
     )
   }
 }
+
+
+
+export default App;
