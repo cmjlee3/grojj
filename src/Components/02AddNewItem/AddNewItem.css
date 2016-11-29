@@ -2,13 +2,18 @@
 
 #addItemDiv{
   position: relative;
+  top: 0vh;
   left: 20vw;
+  height: 80vh;
   height: 90vh;
   width: 60vw;
   background-color: #0A1612;
   display: none;
   border-radius: 3px;
   font-family: 'Raleway', sans-serif;
+  margin-left: 18vh;
+  margin-bottom: 10vh;
+  margin-top: -3vh;
 }
 
 #addItemHeading{
@@ -114,8 +119,8 @@
 }
 
 .condi {
-  /*margin: 10px;*/
-
+  margin-left: 7vw;
+  padding: 5px;
 }
 
 input {

@@ -8,9 +8,8 @@
 #loginSignup {
   position: relative;
   z-index: +1;
-  top: 3vh;
-  left: 20vw;
-  top: 6vh;
+  left: 15vw;
+  top: 7vh;
   height: 50vh;
   width: 60vw;
   border: 1px solid black;
@@ -20,14 +19,15 @@
   background: -webkit-linear-gradient(#fff, #999);
   background: -o-linear-gradient(#fff, #999);
   display: none;
+  text-shadow: 1px 1px 1px #222;
 }
 
 .close-btn {
   height: 3vh;
   width: 3vh;
-  position: relative;
-  top: 0vh;
-  left: 44vh;
+  position: absolute;
+  left: 59vw;
+  bottom: 48vh;
   border-radius: 50%;
   color: #fafafa;
   background: #394149;
@@ -50,7 +50,7 @@
 #signup {
   border-left: .1vw solid #999;
   position: absolute;
-  top: 4.2vh;
+  top: 0vh;
   left: 50%;
   width: 29.45vw;
   height: 45vh;
@@ -61,6 +61,8 @@
   letter-spacing: 4px;
   width: 100%;
   color: #222;
+  margin-top: 12vh;
+  display: inline-block;
   /*font-size: .8em;*/
 }
 
@@ -78,12 +80,15 @@
 
 .modalButton {
   border: none;
-  width: 15vw;
-  font-size: .5em;
+  margin-top: 5px;
+  padding: 5px;
+  width: 172px;
+  font-size: 14px;
   letter-spacing: 1.5px;
   background: #394149;
   color: #fafafa;
-  border-radius: 8px;
+  border-radius: 4px;
+
 }
 
 .modalButton:hover {

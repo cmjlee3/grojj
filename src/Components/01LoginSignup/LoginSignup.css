@@ -1,8 +1,8 @@
 #loginSignup {
   position: relative;
   top: 20vh;
-  /*left: 20vw;
-  height: 70vh;*/
+  left: 15vw;
+  /*height: 70vh;*/
   width: .5vw;
 /*  background-color: #0A1612;
   display: none;*/
@@ -33,6 +33,9 @@
   width: .5vw;
 }
 
+h1 {
+  top: 30px;
+}
 /*#loginSignupCancel{
   position: absolute;
   margin-top: 40vh;

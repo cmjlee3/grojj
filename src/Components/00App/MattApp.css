@@ -18,7 +18,7 @@ body,
 }
 
 .mapContainer {
-  margin-left: 325px;
+  margin-left: 22vw;
   margin-top: 38px;
 }
 
@@ -40,7 +40,7 @@ header {
 
 header > h1 {
   position: absolute;
-  top: 1vh;
+  top: .5vh;
   left: 5vw;
   color: #fafafa;
   text-shadow: 2px 2px 2px #222;
@@ -96,6 +96,7 @@ nav > div {
   text-align: center;
   display: inline-block;
   width: 15vw;
+  font-size: 18px;
 }
 
 .nButton:before{
@@ -139,8 +140,8 @@ footer > p {
     padding-right: 50px;
 }
 
-h1:hover {
-  color: yellow;
+header > h1:hover {
+  text-shadow: 2px 3px #ff0000;
 }
 
 .center-a {

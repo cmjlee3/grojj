@@ -2,27 +2,37 @@
 
 #createStoreDiv{
   position: relative;
-  width: 50vw;
-  left: 38vw;
+  max-width: 50vw;
+  left: 30vw;
   top: 5vh;
   height: 60vh;
   background-color: #0A1612;
   display: none;
   border-radius: 3px;
   font-family: 'Raleway', sans-serif;
-  overflow: auto;
+  overflow-y: auto;
+  margin-bottom: 10vh;
+  margin-left: 22vh;
 }
 
 #createStoreHeading{
   padding: 4%;
+  margin-top: 0vh;
   text-align: center;
   color: #0A1612;
   background-color: #FAFAFA;
   border-radius: 3px;
 }
-#createStoreHeading:hover{
-  color: yellow;
-  }
+
+.borough {
+  margin-left: 7vw;
+  padding: 5px;
+}
+
+.zip {
+  margin-left: 5px;
+  width: 80px;
+}
 
 #addItemHeading:hover{
   color: #F7CE3E;
@@ -36,13 +46,13 @@
 
 #filled{
   margin-top: 10%;
+  margin-left: -60px;
 }
 
 .uname,
 .name,
 .address{
   position: relative;
-  left: 15vw;
   width: 30vw;
 }
 
@@ -81,25 +91,23 @@
 
 #date{
   position: relative;
-  left: 15vw;
+  left: 5vw;
   width: 30vw;
 }
 
 #directions{
   position: relative;
-  left: 15vw;
   width: 30vw;
 }
 
 #startEnd{
   position: relative;
-  left: 15vw;
   display: inline;
 }
 
 #startEnd > input[type=time]{
   height: 40px;
-  width: 15vw;
+  width: 10vw;
   border: none;
 }
 
@@ -116,7 +124,7 @@
   height: 40px;
   width: 30vw;
   position: relative;
-  left: 15vw;
+
 }
 
 .createOrCancel > button{
@@ -136,7 +144,7 @@
 
 #cancelStoreButton{
   position: absolute;
-  left: 15vw;
+
   border: 3px solid #1A2930;
   color: #0A1612;
   background-color: #F7CE3E;
